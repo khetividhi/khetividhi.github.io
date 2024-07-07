@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e4d6ba;
+}
+
+header {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #c2a977;
+    color: black;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+}
+
+.navbar .logo {
+    margin-right: auto;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin-left: 20px;
+    position: relative; 
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    margin: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #227a48;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.Download {
+    display: inline-block;
+    background-color: #227a48;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#download-img {
+    height: 20px;
+    width: 20px;
+}
+
+.logo img {
+    max-height: 100px;
+}
+
+#tagline {
+    position: relative;
+    z-index: 1100;
+    text-align: center;
+    color: #227a48;
+    font-family: 'Irish Grover', sans-serif;
+    font-size: 45px;
+    margin-top: 150px; /* Adjust top margin as needed */
+}
+
+.tagline {
+    font-size: 45px;
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+
+.down {
+    margin-top: 5px;
+    margin-bottom: 1px;
+    font-size: 35px;
+}
+
+#home {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 40px;
+    text-align: left;
+}
+
+#home .home-content {
+    max-width: 60%;
+    flex: 1;
+}
+
+#home-img {
+    height: 400px;
+    width: 400px;
+    margin-left: 20px;
+    flex: 1;
+}
+
+#title {
+    font-size: 50px;
+}
+
+#content {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.feature1, .feature2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 80px;
+}
+
+.f1text, .f2text {
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+    padding-bottom: 2px;
+    width: 100%;
+    max-width: 600px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 30px 0;
+}
+
+#f1disc1, #f2disc1 {
+    margin-bottom: 30px;
+}
+
+#f1disc2, #f2disc2 {
+    margin-bottom: 50px;
+}
+
+#inappimg, #leaseimg, #detectimg, #pestimg, #wetherimg, #demandimg {
+    width: 100%;
+    max-width: 250px;
+    margin-right: 50px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+}
+
+section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.container {
+    margin: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.feature {
+    margin-bottom: 30px;
+}
+
+.feature img {
+    max-width: 100px;
+    height: 100px;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.DownloadApp {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+}
+
+#heading {
+    font-size: 50px;
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+}
+
+#heading2 {
+    font-size: 25px;
+    padding-bottom: 2px;
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+}
+
+#para {
+    font-size: 15px;
+    text-align: left;
+}
+
+#QRimage {
+    align-content: center;
+    justify-items: center;
+    margin-right: 110px;
+}
+
+#app-img {
+    height: 450px;
+    width: 400px;
+}
+
+#cont {
+    background-color: #f3b3b3;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#contact {
+    width: 100%;
+    padding: 10px;
+}
+
+#ele {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -10px;
+}
+
+#helpdesk {
+    height: 450px;
+    width: 100%;
+    max-width: 400px;
+    float: left;
+    margin-top: -100px;
+}
+
+#con {
+    font-size: 50px;
+    text-align: center;
+    flex-grow: 1;
+    margin: 0 20px;
+    font-family: 'Inika', sans-serif;
+}
+
+#teamlogo {
+    height: 100px;
+    width: 150px;
+    align-self: flex-end;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    left: -250px;
+}
+
+.contact-item {
+    margin-top: 100px;
+    height: 40px;
+    width: 300px;
+    background-color: #bbdc95;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#email {
+    margin-bottom: 100px;
+}
+
+#phone {
+    margin-top: -100px;
+}
+
+.contact-img {
+    height: 35px;
+    width: 35px;
+    margin-right: 10px;
+}
+
+.footer {
+    margin-top: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+}
+
+#endline {
+    margin-bottom: 0px;
+}
+
+#team-name {
+    margin-left: -460px;
+    font-family: 'Irish Grover', sans-serif;
+    font-size: large;
+}
+
+#social {
+    height: 50px;
+    width: 50px;
+    background-color: #fc5f5f;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+#social-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer img {
+    height: 50px;
+    width:
