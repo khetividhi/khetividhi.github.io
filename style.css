@@ -175,6 +175,20 @@ header {
   margin-top: 150px;
 }
 
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.animated-section {
+  animation: fadeIn 1s ease-in-out forwards;
+  -webkit-animation: fadeIn 1s ease-in-out forwards;
+}
 .tagline {
   font-size: 45px;
   margin-bottom: -10px;
