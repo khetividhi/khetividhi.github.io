@@ -41,11 +41,11 @@
   }
 
 body {
+  height: max-content;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    
     background-color: #e4d6ba;
 }
 
@@ -143,20 +143,24 @@ header {
 .navbar a:hover::after {
   width: 100%;
 }
-
-.Download {
-  display: inline-block;
-  background-color: #227a48;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
 #download-img {
+
   height: 20px;
   width: 20px;
+ 
 }
-
+  
+.Download {
+  
+ 
+  border-radius: 9px;
+  -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+ 
+  
+}
 .logo img {
   max-height: 100px;
 }
@@ -199,12 +203,35 @@ header {
   max-width: 60%;
   flex: 1;
 }
+.btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+@keyframes slideIn0 {
+  from {
+    transform: translateX(+100%);
+  }
+  to {
+    transform:translateX(0%);
+  }
+}
 
 #home-img {
   width: 2rem;
   margin-left: 20px;
   flex: 1;
+  animation: slideIn0 2s ease-in-out forwards;
+  animation-play-state: running;
 }
+
+
+
 
 #title {
   font-size: 50px;
@@ -215,15 +242,32 @@ header {
   font-weight: 200;
 }
 
-.feature1, .feature2 {
+
+#f1heading , #f2heading {
+  margin-bottom: 20px;
+  line-height: 25px;
+  
+}
+.feature1, 
+.feature2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 20px 80px;
+  
 }
 
-.f1text, .f2text {
+@keyframes slideIn1 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.f1text {
   font-family: 'Inter', sans-serif;
   text-align: left;
   padding-bottom: 2px;
@@ -232,22 +276,85 @@ header {
   font-weight: 600;
   line-height: 20px;
   margin: 30px 0;
+  animation: slideIn1 0.5s ease-out;
+  animation-play-state: running;
+  opacity: 1;
+}
+@keyframes slideIn2 {
+  from {
+    transform: translateX(+100%);
+  }
+  to {
+    transform:translateX(0%);
+  }
+}
+.f2text {
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+  padding-bottom: 2px;
+  width: 100%;
+  max-width: 600px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 30px 0;
+  animation: slideIn2 0.5s ease-out;
+  animation-play-state: running;
+  opacity: 1;
 }
 
+
 #f1disc1, #f2disc1 {
+  
   margin-bottom: 30px;
 }
 
 #f1disc2, #f2disc2 {
+  
   margin-bottom: 50px;
 }
 
-#inappimg, #leaseimg, #detectimg, #pestimg, #wetherimg, #demandimg {
+@keyframes slideIn1 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+ #leaseimg,  #pestimg, #demandimg {
   width: 100%;
   max-width: 250px;
   margin-right: 50px;
   padding-right: 30px;
   padding-bottom: 20px;
+  animation: slideIn1 1s ease-out;
+  animation-play-state: running;
+  opacity: 1;
+  
+
+}
+@keyframes slideIn2 {
+  from {
+    transform: translateX(+100%);
+  }
+  to {
+    transform:translateX(0%);
+  }
+}
+
+
+#inappimg , #detectimg , #wetherimg
+{
+  max-width: 250px;
+  margin-right: 50px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  animation: slideIn2 1s ease-out;
+  animation-play-state:running;
+  opacity: 1;
+  
 }
 
 section {
@@ -259,14 +366,6 @@ section {
   margin: auto;
 }
 
-.btn {
-  display: inline-block;
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-}
 
 .feature {
   margin-bottom: 30px;
@@ -315,7 +414,8 @@ footer {
 #QRimage {
   align-content: center;
   justify-items: center;
-  margin-right: 110px;
+  margin-top: 20px;
+  margin-left: 110px;
 }
 
 #app-img {
@@ -419,7 +519,7 @@ footer {
 }
 
 #team-name {
-    margin-left: -350px;
+    margin-left: 0px;
     font-family: 'Irish Grover', sans-serif;
     font-size: large;
 }
