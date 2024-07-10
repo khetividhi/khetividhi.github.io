@@ -47,26 +47,10 @@ body {
     padding: 0;
     overflow-x: hidden;
     background-color: #e4d6ba;
-}
-
-*, ::before, ::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: var(--header-height) 0 0 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
-  background-color: #e4d6ba;
 }
+
 
 h1, h2, p {
   margin: 0;
@@ -173,34 +157,35 @@ header {
   font-family: 'Irish Grover', sans-serif;
   font-size: 45px;
   margin-top: 150px;
+  animation: 1.5s linear 0s infinite alternate rise, 10s linear 0s infinite psychedelic;
+  -webkit-animation: 1.5s linear 0s infinite alternate rise, 10s linear 0s infinite psychedelic;
 }
 
-
-@keyframes fadeIn {
+@keyframes rise {
   from {
-      opacity: 0;
+    transform: translateX(15vh);
+    -webkit-transform: translateX(15vh);
+    -moz-transform: translateX(15vh);
+    -ms-transform: translateX(15vh);
+    -o-transform: translateX(15vh);
+}
+  to {
+    transform: translateX(10);
+    -webkit-transform: translateX(10);
+    -moz-transform: translateX(10);
+    -ms-transform: translateX(10);
+    -o-transform: translateX(10);
+}
+}
+
+@keyframes psychedelic {
+  from {
+    filter: hue-rotate(0deg);
   }
   to {
-      opacity: 1;
+    filter: hue-rotate(360deg);
   }
 }
-
-.animated-section {
-  animation: fadeIn 1s ease-in-out forwards;
-  -webkit-animation: fadeIn 1s ease-in-out forwards;
-}
-.tagline {
-  font-size: 45px;
-  margin-bottom: -10px;
-  margin-top: -10px;
-}
-
-.down {
-  margin-top: 5px;
-  margin-bottom: 1px;
-  font-size: 35px;
-}
-
 #home {
   display: flex;
   flex-wrap: wrap;
@@ -217,6 +202,27 @@ header {
   max-width: 60%;
   flex: 1;
 }
+#home-img {
+  width: 2rem;
+  margin-left: 20px;
+  flex: 1;
+}
+
+.animate {
+  animation: example-animation 2s ease-in-out;
+}
+
+@keyframes example-animation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .btn {
   display: inline-block;
   background-color: #333;
@@ -226,27 +232,17 @@ header {
   text-decoration: none;
   border-radius: 5px;
 }
-
-@keyframes slideIn0 {
-  from {
-    transform: translateX(+100%);
-  }
-  to {
-    transform:translateX(0%);
-  }
+.tagline {
+  font-size: 45px;
+  margin-bottom: -10px;
+  margin-top: -10px;
 }
 
-#home-img {
-  width: 2rem;
-  margin-left: 20px;
-  flex: 1;
-  animation: slideIn0 2s ease-in-out forwards;
-  animation-play-state: running;
+.down {
+  margin-top: 5px;
+  margin-bottom: 1px;
+  font-size: 35px;
 }
-
-
-
-
 #title {
   font-size: 50px;
 }
@@ -255,8 +251,6 @@ header {
   font-size: 20px;
   font-weight: 200;
 }
-
-
 #f1heading , #f2heading {
   margin-bottom: 20px;
   line-height: 25px;
@@ -269,17 +263,9 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 20px 80px;
-  
 }
 
-@keyframes slideIn1 {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
+
 
 .f1text {
   font-family: 'Inter', sans-serif;
@@ -290,17 +276,7 @@ header {
   font-weight: 600;
   line-height: 20px;
   margin: 30px 0;
-  animation: slideIn1 0.5s ease-out;
-  animation-play-state: running;
-  opacity: 1;
-}
-@keyframes slideIn2 {
-  from {
-    transform: translateX(+100%);
-  }
-  to {
-    transform:translateX(0%);
-  }
+  
 }
 .f2text {
   font-family: 'Inter', sans-serif;
@@ -311,66 +287,59 @@ header {
   font-weight: 600;
   line-height: 20px;
   margin: 30px 0;
-  animation: slideIn2 0.5s ease-out;
-  animation-play-state: running;
-  opacity: 1;
 }
 
 
 #f1disc1, #f2disc1 {
-  
   margin-bottom: 30px;
 }
 
 #f1disc2, #f2disc2 {
-  
   margin-bottom: 50px;
 }
-
-@keyframes slideIn1 {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-
- #leaseimg,  #pestimg, #demandimg {
+#leaseimg,  #pestimg, #demandimg {
   width: 100%;
   max-width: 250px;
   margin-right: 50px;
   padding-right: 30px;
   padding-bottom: 20px;
-  animation: slideIn1 1s ease-out;
-  animation-play-state: running;
-  opacity: 1;
-  
-
 }
-@keyframes slideIn2 {
+.animate {
+  animation: example-animation 1.5s ease-in-out ;
+}
+
+@keyframes example-animation {
   from {
-    transform: translateX(+100%);
+    opacity: 0;
+    transform: translateX(0);
   }
   to {
-    transform:translateX(0%);
+    opacity: 1;
+    transform: translateX(100%);
   }
 }
-
-
-#inappimg , #detectimg , #wetherimg
-{
+#inappimg , #detectimg , #wetherimg{
+  width: 100%;
   max-width: 250px;
   margin-right: 50px;
   padding-right: 30px;
   padding-bottom: 20px;
-  animation: slideIn2 1s ease-out;
-  animation-play-state:running;
-  opacity: 1;
-  
 }
 
+.animate {
+  animation: example-animation 1.5s ease-in-out;
+}
+
+@keyframes example-animation {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
 section {
   padding: 100px 0;
   text-align: center;

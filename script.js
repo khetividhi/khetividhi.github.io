@@ -12,22 +12,48 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const animatedElement = document.querySelector('#inappimg','#detectimg ','#wetherimg', '#leaseimg',  '#pestimg', '#demandimg' );
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Trigger the animation
-          animatedElement.classList.add('animate');
+document.addEventListener('DOMContentLoaded', function () {
+  const divElem = document.querySelector("div");
+  const htmlElem = document.querySelector(":root");
 
-          // Remove the 'animate' class after the animation ends to allow replay
-          animatedElement.addEventListener('animationend', () => {
-            animatedElement.classList.remove('animate');
+  htmlElem.addEventListener("mouseenter", showHide);
+  htmlElem.addEventListener("mouseleave", showHide);
+
+  function showHide() {
+      if (divElem.classList.contains("fade-in")) {
+          divElem.classList.remove("fade-in");
+          divElem.classList.add("fade-out");
+          divElem.addEventListener('animationend', () => {
+              if (divElem.classList.contains("fade-out")) {
+                  divElem.style.display = 'none';
+              }
           }, { once: true });
-        }
-      });
-    }, { threshold: 0.10 }); // Adjust threshold as needed
+      } else {
+          divElem.style.display = 'block';
+          divElem.classList.remove("fade-out");
+          divElem.classList.add("fade-in");
+      }
+  }
 
-    observer.observe(animatedElement);
+  const animatedElements = document.querySelectorAll(' #home-img, #inappimg, #detectimg, #wetherimg, #leaseimg, #pestimg, #demandimg');
+
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              const animatedElement = entry.target;
+              // Trigger the animation
+              animatedElement.classList.add('animate');
+
+              // Remove the 'animate' class after the animation ends to allow replay
+              animatedElement.addEventListener('animationend', () => {
+                  animatedElement.classList.remove('animate');
+              }, { once: true });
+          }
+      });
+  }, { threshold: 0.10 }); // Adjust threshold as needed
+
+  animatedElements.forEach(element => {
+      observer.observe(element);
   });
+});
