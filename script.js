@@ -12,48 +12,51 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-
 document.addEventListener('DOMContentLoaded', function () {
-  const divElem = document.querySelector("div");
-  const htmlElem = document.querySelector(":root");
+    
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('selectstart', event => event.preventDefault());
+    
+    const divElem = document.querySelector("div");
+    const htmlElem = document.querySelector(":root");
 
-  htmlElem.addEventListener("mouseenter", showHide);
-  htmlElem.addEventListener("mouseleave", showHide);
+    htmlElem.addEventListener("mouseenter", showHide);
+    htmlElem.addEventListener("mouseleave", showHide);
 
-  function showHide() {
-      if (divElem.classList.contains("fade-in")) {
-          divElem.classList.remove("fade-in");
-          divElem.classList.add("fade-out");
-          divElem.addEventListener('animationend', () => {
-              if (divElem.classList.contains("fade-out")) {
-                  divElem.style.display = 'none';
-              }
-          }, { once: true });
-      } else {
-          divElem.style.display = 'block';
-          divElem.classList.remove("fade-out");
-          divElem.classList.add("fade-in");
-      }
-  }
+    function showHide() {
+        if (divElem.classList.contains("fade-in")) {
+            divElem.classList.remove("fade-in");
+            divElem.classList.add("fade-out");
+            divElem.addEventListener('animationend', () => {
+                if (divElem.classList.contains("fade-out")) {
+                    divElem.style.display = 'none';
+                }
+            }, { once: true });
+        } else {
+            divElem.style.display = 'block';
+            divElem.classList.remove("fade-out");
+            divElem.classList.add("fade-in");
+        }
+    }
 
-  const animatedElements = document.querySelectorAll(' #home-img, #inappimg, #detectimg, #wetherimg, #leaseimg, #pestimg, #demandimg');
+    const animatedElements = document.querySelectorAll('#home-img, #inappimg, #detectimg, #wetherimg, #leaseimg, #pestimg, #demandimg');
 
-  const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              const animatedElement = entry.target;
-              // Trigger the animation
-              animatedElement.classList.add('animate');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const animatedElement = entry.target;
+                // Trigger the animation
+                animatedElement.classList.add('animate');
 
-              // Remove the 'animate' class after the animation ends to allow replay
-              animatedElement.addEventListener('animationend', () => {
-                  animatedElement.classList.remove('animate');
-              }, { once: true });
-          }
-      });
-  }, { threshold: 0.10 }); // Adjust threshold as needed
+                // Remove the 'animate' class after the animation ends to allow replay
+                animatedElement.addEventListener('animationend', () => {
+                    animatedElement.classList.remove('animate');
+                }, { once: true });
+            }
+        });
+    }, { threshold: 0.10 }); // Adjust threshold as needed
 
-  animatedElements.forEach(element => {
-      observer.observe(element);
-  });
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
 });
