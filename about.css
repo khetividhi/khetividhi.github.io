@@ -70,6 +70,62 @@ header {
     height: 20px;
     width: 20px;
 }
+@media screen and (max-width: 1024px) {
+  .team-member {
+    width: calc(45% - 2rem);
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .team {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .team-member {
+    width: 90%;
+    margin: 1rem 0;
+  }
 
+  .team-member p {
+    font-size: 0.95rem;
+  }
+
+  .team-member h2 {
+    font-size: 1.3rem;
+  }
+
+  .tmem {
+    width: 120px;
+    height: 120px;
+  }
+
+  .image {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team-member h2 {
+    font-size: 1.1rem;
+  }
+
+  .team-member p {
+    font-size: 0.9rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .tmem {
+    width: 100px;
+    height: 100px;
+  }
+
+  .image {
+    height: 16px;
+    width: 16px;
+  }
+}
