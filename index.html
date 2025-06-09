@@ -5,160 +5,206 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="Asset/favicon.png">
     <title>Home | KhetiVidhi</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="Asset/khetiVidhi.png" alt="Logo">
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="Asset/khetiVidhi.png" alt="KhetiVidhi Logo">
+                <span>KhetiVidhi</span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#about" class="nav__link">About</a></li>
+                    <li><a href="#features" class="nav__link">Features</a></li>
+                    <li><a href="#process" class="nav__link">How It Works</a></li>
+                    <li><a href="#footer" class="nav__link">Contact</a></li>
+                </ul>
             </div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#Features">Features</a></li>
-                <li class="Download"><a href="#DownloadApp">Download <!--<img src="Asset/download_icon.png" id="download-img">--></a></li>
-                <li><a href="#khetividhi-footer">Contact Us</a></li> 
-            </ul>
+
+            <div class="nav__actions">
+                <a href="#download" class="btn btn--primary">Download App</a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i data-feather="menu"></i>
+                </div>
+            </div>
         </nav>
-    </header> 
+    </header>
 
-    <section id="contact" class="animated-section">
-        <!-- Contact section content -->
-        <h1 id="tagline"><p class="tagline">Farm to future </p><p class="down">Humara saath</p></h1>
-        
-    </section>
-    <section id="home">
-        <div class="home-content">
-
-            <h2 id="title">KhetiVidhi</h2>
-            <p id="content">KhetiVidhi is an innovative platform designed to support farmers by providing essential information, resources, and services to improve crop health, maximize profits, and facilitate sustainable farming practices.</p>
-            <a href="#Features" class="btn">Learn More</a>
-        </div>
-        <img id="home-img" src="Asset/khetiVidhi.png" alt="Home Image">
-    </section>
-    
-    <section id="Features">
-        <div class="feature-page">
-            <div class="feature1">
-                <div class="f1text">
-                    <h1 id="f1heading">In-App selling & purchasing facilities</h1>
-                    <p id="f1disc1" class="f1para">We are providing an In-App selling and purchasing facilities to farmers & customers. This feature removes the middlemen of mandi and maximize the profit of both the parties.</p>
-                    <p id="f1disc2" class="f1para">Farmers can update their inventory in app by uploading the quantity of produces & customer can order the produce from their nearest available farmer.</p>
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        Farm Smarter, Not Harder. <br>
+                        <span class="highlight">Your Future of Farming is Here.</span>
+                    </h1>
+                    <p class="hero__description">
+                        KhetiVidhi empowers farmers with AI-driven insights, a direct-to-consumer marketplace, and real-time data to maximize yield and profitability.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#download" class="btn btn--primary btn--large">Get Started for Free</a>
+                        <a href="#features" class="btn btn--secondary btn--large">Explore Features</a>
+                    </div>
                 </div>
-                <img id="inappimg" src="Asset/inapp.png" alt="Feature 1">
+                <div class="hero__image-container">
+                    <img src="Asset/appdownload.png" alt="KhetiVidhi App Interface on a Smartphone" class="hero__image">
+                </div>
             </div>
-            <div class="feature2">
-                <img id="wetherimg" src="Asset/weather.png" alt="Feature 1">
-                <div class="f2text">
-                    <h1 id="f2heading">Regular weather updates & field information</h1>
-                    <p id="f2disc1" class="f1para">We provide regular weather updates and detailed field information, including soil type and moisture levels.</p>
-                    <p id="f2disc2" class="f1para">This helps farmers make informed decisions, optimizing crop management and improving agricultural productivity.</p>
+        </section>
+        <section class="section" id="about">
+            <div class="container about__container">
+                <div class="about__image-container animate-on-scroll">
+                    <img src="Asset/khetiVidhi.png" alt="KhetiVidhi Logo Large">
                 </div>
-            </div>    
-           
-            <div class="feature1">
-               <div class="f1text">
-                    <h1 id="f1heading">Suggestions for Pesticides, Insecticides, & Home Remedies</h1>
-                    <p id="f1disc1">We offer tailored suggestions for pesticides, insecticides, and home remedies to enhance crop health and yield.</p>
-                    <p id="f1disc2">Our recommendations aim to control pests effectively while promoting sustainable and eco-friendly agricultural practices.</p>
+                <div class="about__content animate-on-scroll">
+                    <h2 class="section__title">What is KhetiVidhi?</h2>
+                    <p class="section__description">
+                        KhetiVidhi is an all-in-one platform designed to revolutionize agriculture. We bridge the gap between traditional farming wisdom and modern technology, providing farmers with the tools they need to thrive in a changing world. From detecting crop diseases with your phone camera to selling produce directly to customers, we are your trusted partner every step of the way.
+                    </p>
                 </div>
-                <img id="pestimg" src="Asset/pest.png" alt="Feature 1">
             </div>
-           
-            <div class="feature2">
-                <img id="detectimg" src="Asset/detect.png" alt="Feature 1">
-                <div class="f2text">
-                    <h1 id="f2heading">Disease detection in crops</h1>
-                    <p id="f2disc1" class="f1para">We are providing a feature that will help farmers to detect the disease in the plant and give cures according to disease.</p>
-                    <p id="f2disc2" class="f1para">Also it will suggest home remedies (if there any) to treat disease at a lower cost.</p>
+        </section>
+
+        <section class="section" id="features">
+            <div class="container">
+                <h2 class="section__title text-center">Everything You Need to Succeed</h2>
+                <p class="section__description text-center">A complete toolkit for the modern farmer.</p>
+
+                <div class="features__grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon"><i data-feather="shopping-cart"></i></div>
+                        <h3 class="feature-card__title">Direct Marketplace</h3>
+                        <p class="feature-card__description">Sell your produce directly to consumers and businesses, or buy direct from farmers, cutting out the middleman and maximizing your profits.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon"><i data-feather="camera"></i></div>
+                        <h3 class="feature-card__title">AI Disease Detection</h3>
+                        <p class="feature-card__description">Simply snap a photo of a leaf, and our AI will instantly identify diseases and suggest effective remedies.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon"><i data-feather="shield"></i></div>
+                        <h3 class="feature-card__title">Intelligent Pest & Disease Control</h3>
+                        <p class="feature-card__description">Get data-driven suggestions for pesticides, insecticides, and home remedies tailored to your specific crop and situation. We offer a comprehensive database of treatments to ensure you can effectively manage any pest or disease.</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon"><i data-feather="trending-up"></i></div>
+                        <h3 class="feature-card__title">Market Demand Insights</h3>
+                        <p class="feature-card__description">Receive AI-powered suggestions on which crops to plant based on current and predicted market demand.</p>
+                    </div>
+                    <!-- Feature 5 -->
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-card__icon"><i data-feather="cloud"></i></div>
+                        <h3 class="feature-card__title">Hyperlocal Weather</h3>
+                        <p class="feature-card__description">Get accurate, real-time weather forecasts and soil moisture data tailored specifically for your fields.</p>
+                    </div>
                 </div>
-            </div> 
             </div>
-            <div class="feature1">
-                
-                <div class="f1text">
-                    <h1 id="f1heading">Suggestion based on Market Demand</h1>
-                    <p id="f1disc1">We are providing suggestion based on market demand</p>
-                    <p id="f1disc2">We use weather forecasts to predict when people will want to buy more of certain products. We also quickly adjust to what people are saying they want to buy. And we make sure products are available on time by following regular trade rules.</p>
+        </section>
+<section class="section" id="process">
+    <div class="container">
+        <h2 class="section__title text-center">Get Started in 3 Simple Steps</h2>
+        <p class="section__description text-center">Transform your farming with KhetiVidhi in just a few minutes.</p>
+
+        <div class="process__grid-container">
+            <div class="process__line"></div>
+            <div class="process__grid">
+                <div class="process-step animate-on-scroll">
+                    <div class="process-step__number">1</div>
+                    <div class="process-step__icon"><i data-feather="camera"></i></div>
+                    <h3 class="process-step__title">Scan & Diagnose</h3>
+                    <p class="process-step__description">Use your phone's camera to snap a photo of a plant. Our AI instantly analyzes it for diseases and nutrient deficiencies.</p>
                 </div>
-                <img id="demandimg" src="Asset/demand.png" alt="Feature 1">
+
+                <div class="process-step animate-on-scroll">
+                    <div class="process-step__number">2</div>
+                    <div class="process-step__icon"><i data-feather="bar-chart-2"></i></div>
+                    <h3 class="process-step__title">Get Instant Insights</h3>
+                    <p class="process-step__description">Receive clear, actionable advice: from treatment suggestions and weather forecasts to real-time market prices for your crops.</p>
+                </div>
+
+                <div class="process-step animate-on-scroll">
+                    <div class="process-step__number">3</div>
+                    <div class="process-step__icon"><i data-feather="shopping-cart"></i></div>
+                    <h3 class="process-step__title">Connect & Sell</h3>
+                    <p class="process-step__description">List your healthy produce directly on our marketplace. Connect with local buyers and earn the profits you truly deserve.</p>
+                </div>
             </div>
         </div>
-    </section>
-
-    <section id="DownloadApp">
-        <div class="DownloadApp">
-          <div class="left-block"> 
-             <h1 id="heading">Download KhetiVidhi</h1>
-             <h4 id="heading2"> Use KhetiVidhi accross your device</h4>
-             <p id="para">By installing KhetiVidhi, you agree to our <u>terms & conditions.</u></p>
-             <img src="Asset/qr.png" alt=" QR Code" id="QRimage">
-          </div>
-          <img src="Asset/appdownload.png" alt="application download image" id="app-img">
-        </div>
-     </section>
-<footer id="khetividhi-footer">
-  <div class="footer-wrapper">
-    <div class="footer-columns">
-      
-      <!-- About Us -->
-      <div class="footer-column">
-        <h4>About Us</h4>
-        <ul>
-          <li><a href="#home">About KhetiVidhi</a></li>
-          <li><a href="#">Our Mission</a></li>
-          <li><a href="about.html">Team & Advisors</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Careers</a></li>
-        </ul>
-      </div>
-
-      <!-- Services -->
-      <div class="footer-column">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="#">Crop Disease Detection</a></li>
-          <li><a href="#">Buy Crops Online</a></li>
-          <li><a href="#">Sell Produce (For Farmers)</a></li>
-          <li><a href="#">Real-Time Crop Prices</a></li>
-        </ul>
-      </div>
-
-      <!-- Resources -->
-      <div class="footer-column">
-        <h4>Resources</h4>
-        <ul>
-          <li><a href="#">Blogs & News</a></li>
-          <li><a href="#">How It Works</a></li>
-          <li><a href="#">Farmer Guides (PDF)</a></li>
-          <li><a href="#">FAQs</a></li>
-        </ul>
-      </div>
-
-      <!-- Contact Us -->
-      <div class="footer-column">
-        <h4>Contact Us</h4>
-        <p>📍 Jaipur, Rajasthan</p>
-        <p>📞 +91-9584381440</p>
-        <p>✉️ algoallies01@gmail.com</a></p>
-        <div class="social-icons">
-          <a href="#"><img src="Asset/ig.png" alt="Instagram"></a>
-          <a href="#"><img src="Asset/linkedin.png" alt="LinkedIn"></a>
-          <a href="#"><img src="Asset/twitter.png" alt="X"></a>
-        </div>
-      </div>
     </div>
+</section>
+        <section class="section cta" id="download">
+            <div class="container cta__container">
+                <div class="cta__content">
+                    <h2 class="section__title cta__title">Take Control of Your Farm's Future</h2>
+                    <p class="section__description cta__description">Download KhetiVidhi today and join a community of thousands of smart farmers. Scan the QR code or click below.</p>
+                    <img src="Asset/qr.png" alt="QR Code to download KhetiVidhi App" class="cta__qr">
+                    <div class="cta__store-buttons">
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- Bottom Bar -->
-    <div class="footer-bottom">
-        <p>Powered by Catalyst AIC | Made with ❤️ in Jaipur</p>
-      <p>© 2024 KhetiVidhi. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-
-       <script src="script.js"></script>
+    <footer class="footer" id="footer">
+        <div class="container footer__container">
+            <div class="footer__about">
+                <a href="#" class="footer__logo">
+                    <img src="Asset/khetiVidhi.png" alt="KhetiVidhi Logo">
+                    <span>KhetiVidhi</span>
+                </a>
+                <p>Farm to future, Humara saath.</p>
+                <div class="footer__socials">
+                    <a href="#" aria-label="Instagram"><i data-feather="instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-feather="twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer__links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#features">Crop Disease Detection</a></li>
+                    <li><a href="#features">Buy Crops Online</a></li>
+                    <li><a href="#features">Sell Produce</a></li>
+                    <li><a href="#features">Real-Time Crop Prices</a></li>
+                </ul>
+            </div>
+            <div class="footer__links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About KhetiVidhi</li>
+                    <li><a href="about.html">Team & Advisors</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <h4>Contact Us</h4>
+                <p>📍 Jaipur, Rajasthan</p>
+                <p><a href="tel:+919584381440">📞 +91-9584381440</a></p>
+                <p class="footer__contact-item">
+                <span>✉️</span><a href="mailto:algoallies01@gmail.com">algoallies01@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>Powered by Catalyst AIC | Made with ❤️ in Jaipur</p>
+            <p>© 2024 KhetiVidhi. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
-</script>
 </html>
